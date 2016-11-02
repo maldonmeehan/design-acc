@@ -1,0 +1,158 @@
+@import 'helpers/mixins';
+* {
+margin: 0;
+padding: 0;
+}
+
+.navbar {
+  background-color: #158DA6;
+  color: white;
+  font-weight: bold;
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 0;
+  li {
+    list-style-type: none;
+    padding-top: 10px;
+  }
+}
+
+.logo {
+  height: 50px;
+  width: 50px;
+}
+
+.gallery {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.image1 {
+  background-image: url("../img/car.jpg");
+  @include photo-styles ;
+}
+
+.image2 {
+  background-image: url("../img/trainstation.jpg");
+  @include photo-styles ;
+}
+
+.image3 {
+  background-image: url("../img/waves.JPG");
+  @include photo-styles ;
+}
+
+.instagram {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+// just for mockup purposes will be replaced by IG API
+.thumbnail {
+  border: 1px solid black;
+  height: 130px;
+  width: 100px;
+  background-color: steelblue;
+}
+
+.card {
+  border: 1px solid black;
+  text-align: center;
+  margin-top: 2em;
+}
+
+// can be removed for refactoring just for display
+.card-photo {
+  height: 300px;
+  width: 400px;
+}
+
+.popular {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+// landing page
+
+.hero-image {
+background-image: url("../img/travelpic.jpg");
+background-repeat: no-repeat;
+background-size: cover;
+background-position: right;
+height: 100vh;
+position: relative;
+}
+
+.login {
+  @include opaque-boxes;
+  position: relative;
+  top: 200px;
+  left: 100px;
+}
+
+.about-acc {
+  @include opaque-boxes;
+  position: absolute;
+  top: 200px;
+  left: 800px;
+}
+
+.about-acc {
+  text-align: center;
+  padding: 1em;
+}
+
+.login-button {
+  background-color: #0A5F70;
+  position: absolute;
+  left: 150px;
+  top: 300px;
+  @include buttons;
+}
+
+.signup-button {
+  @include buttons;
+  background-color: #1EBBD1;
+  position: absolute;
+  left: 150px;
+  top: 400px;
+}
+// styles for profile page
+
+.profile-hero {
+  background-image: url("../img/travelpic.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: right;
+  height: 30em;
+  position: relative;
+}
+
+.user-info {
+  opacity: 0.64;
+  background: #D8D8D8;
+  height: 300px;
+  width: 300px;
+  position: absolute;
+  top: 4em;
+  left: 5em;
+}
+
+.profile-pic {
+  position: absolute;
+  z-index: 1000;
+  border-radius: 50%;
+  height: 150px;
+  top: 6em;
+  left: 9.5em;
+}
+
+.user-about {
+  text-align: left;
+  padding: 3em;
+}
